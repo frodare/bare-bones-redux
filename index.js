@@ -26,7 +26,6 @@ const reducer = combineReducers({
 })
 
 const store = createStore(reducer)
-window.store = store
 
 /*
  * React
@@ -37,6 +36,9 @@ const Example = ({count, increment, decrement}) => <div>
   <button onClick={decrement}>Decrement</button>
 </div>
 
+/*
+ * React + Redux
+ */
 const ExampleContainer = connect(
   state => ({
     count: state.counter
